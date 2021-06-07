@@ -8,7 +8,7 @@ pipeline {
                           export DEPLOYMENT_ENVIRONMENT=Dev
                           printenv
                           aws s3 ls
-                         aws s3 cp s3://mdm-npss/dev/apache-tomcat-9.0.46.tar.gz //var/lib/jenkins --include '*apache-tomcat-9.0.46.tar.gz*' --recursive
+                         aws s3 cp s3://mdm-npss/dev/apache-tomcat-9.0.46.tar.gz /opt
                        '''
             }       
         }
@@ -20,7 +20,7 @@ pipeline {
                 steps{
                     //withCredentials([string(credentialsId: '', variable: '')]) {
                         sh '''
-                             cd /var/lib/jenkins
+                             cd /opt
                              tar -xvf apache-tomcat-9.0.46.tar.gz
                              cd apache-tomcat-9.0.46/bin
                             ./startup.sh
