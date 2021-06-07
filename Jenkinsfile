@@ -24,6 +24,7 @@ pipeline {
                              tar -xvf apache-tomcat-9.0.46.tar.gz
                              cd apache-tomcat-9.0.46/bin
                             ./startup.sh
+                            rm -rf /var/lib/jenkin/apache-tomcat-9.0.46.tar.gz
                           
                         '''
                     //}
