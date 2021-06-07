@@ -20,7 +20,7 @@ pipeline {
                 steps{
                     //withCredentials([string(credentialsId: '', variable: '')]) {
                         sh '''
-                            sudo cd /opt
+                            sudo cd /home/ec2-user/
                             sudo tar -xvf apache-tomcat-9.0.46.tar.gz
                             sudo cd apache-tomcat-9.0.46/bin
                             ./startup.sh
