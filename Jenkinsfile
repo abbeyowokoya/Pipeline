@@ -8,7 +8,7 @@ pipeline {
                           export DEPLOYMENT_ENVIRONMENT=Dev
                           printenv
                           aws s3 ls
-                         aws s3 cp s3://mdm-npss/dev/apache-tomcat-9.0.46.tar.gz /home/ec2-user/
+                         aws s3 cp s3://mdm-npss/dev/apache-tomcat-9.0.46.tar.gz //home/ec2-user/ --exclude '*' --include '*2014-01*' --recursive
                        '''
             }       
         }
