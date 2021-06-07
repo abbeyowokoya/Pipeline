@@ -6,7 +6,6 @@ pipeline {
                       sh '''
                           echo 'exporting AWS Environment'
                           export DEPLOYMENT_ENVIRONMENT=Dev
-                          source ~/.bashrc
                           printenv
                           aws s3 ls
                          aws s3 cp s3://mdm-npss/dev/apache-tomcat-9.0.46.tar.gz /opt 
