@@ -20,6 +20,7 @@ pipeline {
                 steps{
                     //withCredentials([string(credentialsId: '', variable: '')]) {
                         sh '''
+                             whoami
                              cd /home/ec2-user/
                              tar -xvf apache-tomcat-9.0.46.tar.gz
                              cd apache-tomcat-9.0.46/bin
