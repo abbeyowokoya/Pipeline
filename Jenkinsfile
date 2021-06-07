@@ -20,7 +20,6 @@ pipeline {
                 steps{
                     //withCredentials([string(credentialsId: '', variable: '')]) {
                         sh '''
-                             chmod -R 777 /home/ec2-user/
                              tar -xvf /home/ec2-user/apache-tomcat-9.0.46.tar.gz
                              cd apache-tomcat-9.0.46/bin
                             ./startup.sh
